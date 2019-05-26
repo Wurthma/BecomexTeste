@@ -7,6 +7,13 @@ Avalição Becomex Desenvolvimento WEB
 
 -------------------------------------------------------------------------------------
 
+Ferramentas e Frameworks:
+
++ .NetCore 2.2
++ API documentada com Swagger (Swashbuckle.AspNetCore)
+
+-------------------------------------------------------------------------------------
+
 O estado inicial de todos movimentos é **"Em repouso"**. Os estados são representados na API pelos números que estão documentados entre parenteses ao lado dos seus respectivos nomes.
 
 ##Ações do robo

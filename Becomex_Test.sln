@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "Becomex_Test\API.csproj", "{BEE0C341-3308-44D1-BD97-AAAF36EF5C76}"
+	ProjectSection(ProjectDependencies) = postProject
+		{69D2419B-DDFC-4A7F-8736-E307068E7E1A} = {69D2419B-DDFC-4A7F-8736-E307068E7E1A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R.O.B.O", "Robo\R.O.B.O.csproj", "{69D2419B-DDFC-4A7F-8736-E307068E7E1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoboUnitTest", "RoboUnitTest\RoboUnitTest.csproj", "{1913585C-E53B-4DDD-B143-359029E045A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEE0C341-3308-44D1-BD97-AAAF36EF5C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE0C341-3308-44D1-BD97-AAAF36EF5C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE0C341-3308-44D1-BD97-AAAF36EF5C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE0C341-3308-44D1-BD97-AAAF36EF5C76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69D2419B-DDFC-4A7F-8736-E307068E7E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69D2419B-DDFC-4A7F-8736-E307068E7E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69D2419B-DDFC-4A7F-8736-E307068E7E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69D2419B-DDFC-4A7F-8736-E307068E7E1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1913585C-E53B-4DDD-B143-359029E045A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1913585C-E53B-4DDD-B143-359029E045A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1913585C-E53B-4DDD-B143-359029E045A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1913585C-E53B-4DDD-B143-359029E045A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7DFB0E2-98E2-4497-86FC-C3D159BD5719}
+	EndGlobalSection
+EndGlobal

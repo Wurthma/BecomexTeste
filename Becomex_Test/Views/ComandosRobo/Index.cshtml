@@ -1,0 +1,139 @@
+﻿@model API.ViewModels.RoboViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="py-5 text-center">
+    <h2>Teste Becomex - R.O.B.O.</h2>
+    <p class="lead"><a href="swagger">Acesse o swagger</a> para a documentação da API</p>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        Status do R.O.B.O.
+    </div>
+    <div class="card-body">
+
+        <div class="card">
+            <div class="card-body">
+                <h3>Cabeça</h3>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p>@Html.LabelFor(model => model.Cabeca.EstadoAtualInclinacao) <span class="badge badge-info">@Html.Raw(Model.Cabeca.EstadoAtualInclinacao)</span> </p>
+
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p>@Html.LabelFor(model => model.Cabeca.EstadoAtualRotacao) <span class="badge badge-info">@Html.Raw(Model.Cabeca.EstadoAtualRotacao)</span> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <h3>Braço esquerdo</h3>
+                        <p>@Html.LabelFor(model => model.BracoEsquerdo.Cotovelo.EstadoAtualContracao) <span class="badge badge-info">@Html.Raw(Model.BracoEsquerdo.Cotovelo.EstadoAtualContracao)</span> </p>
+                        <p>@Html.LabelFor(model => model.BracoEsquerdo.Pulso.EstadoAtualRotacao) <span class="badge badge-info">@Html.Raw(Model.BracoEsquerdo.Pulso.EstadoAtualRotacao)</span> </p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h3>Braço direito</h3>
+                        <p>@Html.LabelFor(model => model.BracoDireito.Cotovelo.EstadoAtualContracao) <span class="badge badge-info">@Html.Raw(Model.BracoDireito.Cotovelo.EstadoAtualContracao)</span> </p>
+                        <p>@Html.LabelFor(model => model.BracoDireito.Pulso.EstadoAtualRotacao) <span class="badge badge-info">@Html.Raw(Model.BracoDireito.Pulso.EstadoAtualRotacao)</span> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @if (Model.Sucesso)
+        {
+            <p class="badge badge-success">Comando executado com sucesso!</p>
+        }
+        else
+        {
+            <p class="badge badge-danger">Não foi possível executar o comando!</p>
+        }
+        <p>@Html.LabelFor(model => model.Menssagem) <span class="badge badge-info">@Html.Raw(Model.Menssagem)</span> </p>
+        <p><button type="button" class="form-control btn btn-primary comando" value="0">Atualizar informações do robo</button></p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        Cabeça
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Comandos da cabeça</h5>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>Inclinação da cabeça</label>
+                <p><button type="button" class="form-control btn btn-primary comando" value="1">Inclinar para baixo</button></p>
+                <p><button type="button" class="form-control btn btn-primary comando" value="2">Inclinar para cima</button></p>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>Rotação da cabeça</label>
+                <p><button type="button" class="form-control btn btn-primary comando" value="3">Rotação positiva</button></p>
+                <p><button type="button" class="form-control btn btn-primary comando" value="4">Rotação negativa</button></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">
+                Braço Esquerdo
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Comandos do Cotovelo e Pulso esquerdo</h5>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label>Cotovelo</label>
+                        <p><button type="button" class="form-control btn btn-primary comando" value="5">Contrair cotovelo</button></p>
+                        <p><button type="button" class="form-control btn btn-primary comando" value="6">Descontrair cotovelo</button></p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Pulso</label>
+                        <p><button type="button" class="form-control btn btn-primary comando" value="7">Rotação positiva</button></p>
+                        <p><button type="button" class="form-control btn btn-primary comando" value="8">Rotação negativa</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">
+                Braço Direito
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Comandos do Cotovelo e Pulso direito</h5>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label>Cotovelo</label>
+                        <p><button type="button" class="form-control btn btn-primary comando" value="9">Contrair cotovelo</button></p>
+                        <p><button type="button" class="form-control btn btn-primary comando" value="10">Descontrair cotovelo</button></p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Pulso</label>
+                        <p><button type="button" class="form-control btn btn-primary comando" value="11">Rotação positiva</button></p>
+                        <p><button type="button" class="form-control btn btn-primary comando" value="12">Rotação negativa</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(".comando").click(function () {
+        url = "/ComandosRobo?id=";
+        var value = this.value;
+        //$.get(url, { id: value });
+        window.location = url + value;
+    });
+</script>
